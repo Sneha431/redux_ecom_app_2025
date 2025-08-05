@@ -82,7 +82,7 @@ const Cart = () => {
           </div>
 
           {/* Cart Totals */}
-          <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border">
+          <div className="md:w-1/3 bg-white p-6 rounded-lg shadow-md border border-gray-300">
             <h3 className="text-sm font-semibold mb-5">CART TOTALS</h3>
 
             <div className="flex justify-between mb-5 border-b pb-1">
@@ -109,7 +109,10 @@ const Cart = () => {
               <span>${cart.totalPrice.toFixed(2)}</span>
             </div>
 
-            <button className="w-full bg-red-600 text-white py-2 hover:bg-red-800" onClick={()=>navigate("/checkout")}>
+            <button
+              className="w-full bg-red-600 text-white py-2 hover:bg-red-800"
+              onClick={() => navigate("/checkout")}
+            >
               Proceed to Checkout
             </button>
           </div>
