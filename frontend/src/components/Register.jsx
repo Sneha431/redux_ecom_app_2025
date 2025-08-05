@@ -2,7 +2,7 @@ import React from 'react'
 
 const Register = () => {
   return (
-    <div>
+    <div className="container w-1/3 mt-6 mx-auto mb-7 py-8 px-4 md:px-16 lg:px-24 rounded-sm shadow-md border border-gray-300 bg-gray-100">
       <h2 className="text-2xl font-bold mb-4">Register</h2>
       <form>
         <div className="mb-4">
@@ -32,8 +32,6 @@ const Register = () => {
             placeholder="Enter Password"
           />
         </div>
-
-       
 
         {/* Submit Button */}
         <div className="mb-4">
