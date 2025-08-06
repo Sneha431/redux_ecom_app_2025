@@ -11,13 +11,12 @@ import Shop from './Shop';
 
 
 const Home = () => {
-  const dispatch= useDispatch();
-  const products = useSelector(state=>state.product);
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.product);
   useEffect(() => {
- dispatch(setProducts(mockData));
-    
-  }, [])
-  
+    dispatch(setProducts(mockData));
+  }, []);
+
   return (
     <>
       <div className="bg-white mt-2 px-4 md:px-16 lg:px-24">
@@ -40,7 +39,11 @@ const Home = () => {
           </div>
 
           <div className="w-full md:w-9/12 mt-8 md:mt-0 h-96 relative">
-            <img src={HeroImage} alt="" className="h-full w-full object-cover" />
+            <img
+              src={HeroImage}
+              alt=""
+              className="h-full w-full object-cover"
+            />
             <div className="absolute top-16 left-8">
               <p className="text-gray-600 mb-4">Code With Sneha</p>
               <h2 className="text-3xl font-bold">WELCOME TO E-SHOP</h2>
@@ -54,7 +57,9 @@ const Home = () => {
           </div>
         </div>
         <InfoSection />
-        <Category />
+        <Category
+         
+        />
         <div className="container mx-auto py-12">
           <h2 className="text-xl font-bold mb-6 text-center">Top Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -67,6 +72,6 @@ const Home = () => {
       <Shop />
     </>
   );
-}
+};
 
 export default Home

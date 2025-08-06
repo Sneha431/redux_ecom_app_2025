@@ -176,8 +176,9 @@ const Cart = ({address,setaddress}) => {
           </Modal>
         </div>
       ) : (
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center justify-center">
           <img src={Emptycart} alt="" className="h-96" />
+          <p className='text-3xl font-bold'>No items in the cart</p>
         </div>
       )}
     </div>

@@ -42,7 +42,7 @@ navigate("/filter-data");
               className="w-full py-2 px-4 border border-gray-300 rounded-sm"
               onChange={(e)=>setsearch(e.target.value)}
             />
-            <FaSearch className="absolute top-3 right-3 text-red-500"></FaSearch>
+           <FaSearch className="absolute top-3 right-3 text-red-500 cursor-pointer" onClick={handlesearch}></FaSearch>
           </form>
         </div>
         <div className="flex items-center space-x-4">

@@ -5,6 +5,7 @@ export const mockData = [
     title: "Men's Autumn Jacket with Hood",
     price: 59.99,
     image: "https://images.pexels.com/photos/5792896/pexels-photo-5792896.jpeg",
+    category: "men",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const mockData = [
     title: "Children's Fashionable Couple Casual Wear",
     price: 44.99,
     image: "https://images.pexels.com/photos/1620765/pexels-photo-1620765.jpeg",
+    category: "kids",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ export const mockData = [
     title: "Fashionable Men and Women Streetwear",
     price: 69.99,
     image: "https://images.pexels.com/photos/7081105/pexels-photo-7081105.jpeg",
+    category: "men",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ export const mockData = [
     title: "Traditional Wear for Woman and Girl",
     price: 39.99,
     image: "https://images.pexels.com/photos/8819201/pexels-photo-8819201.jpeg",
+    category: "women",
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ export const mockData = [
     title: "Men's Black Urban Street Style Outfit",
     price: 49.99,
     image: "https://images.pexels.com/photos/2209971/pexels-photo-2209971.jpeg",
+    category: "men",
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ export const mockData = [
     title: "Women's Pink Floral Summer Dress",
     price: 34.99,
     image: "https://images.pexels.com/photos/6311601/pexels-photo-6311601.jpeg",
+    category: "women",
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ export const mockData = [
     title: "Boys' Hooded Sweatshirt and Pants Set",
     price: 27.99,
     image: "https://images.pexels.com/photos/3662832/pexels-photo-3662832.jpeg",
+    category: "kids",
   },
   {
     id: 8,
@@ -54,6 +61,7 @@ export const mockData = [
     title: "Women's Elegant Beige Winter Coat",
     price: 74.99,
     image: "https://images.pexels.com/photos/1916825/pexels-photo-1916825.jpeg",
+    category: "women",
   },
   {
     id: 9,
@@ -61,6 +69,7 @@ export const mockData = [
     title: "Little Girl's Blue Denim Dungaree",
     price: 24.49,
     image: "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg",
+    category: "kids",
   },
   {
     id: 10,
@@ -68,6 +77,7 @@ export const mockData = [
     title: "Men's Grey Slim Fit Office Blazer",
     price: 89.99,
     image: "https://images.pexels.com/photos/3771836/pexels-photo-3771836.jpeg",
+    category: "men",
   },
   {
     id: 11,
@@ -75,6 +85,7 @@ export const mockData = [
     title: "Women's Festive Sari with Modern Twist",
     price: 56.0,
     image: "https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg",
+    category: "women",
   },
   {
     id: 12,
@@ -82,6 +93,7 @@ export const mockData = [
     title: "Women's Day Out Look with Backpack",
     price: 32.0,
     image: "https://images.pexels.com/photos/3756168/pexels-photo-3756168.jpeg",
+    category: "women",
   },
   {
     id: 13,
@@ -89,6 +101,7 @@ export const mockData = [
     title: "Men's Black & White Monochrome Outfit",
     price: 52.99,
     image: "https://tinyurl.com/monocasual",
+    category: "men",
   },
   {
     id: 14,
@@ -96,6 +109,7 @@ export const mockData = [
     title: "Boys Traditional Ethnic Wear",
     price: 35.75,
     image: "https://images.pexels.com/photos/1648378/pexels-photo-1648378.jpeg",
+    category: "kids",
   },
   {
     id: 15,
@@ -103,6 +117,7 @@ export const mockData = [
     title: "Men's Black Leather Biker Jacket",
     price: 119.99,
     image: "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg",
+    category: "men",
   },
   {
     id: 16,
@@ -110,6 +125,7 @@ export const mockData = [
     title: "Women's Retro Polka Dot Summer Dress",
     price: 44.0,
     image: "https://images.pexels.com/photos/1394882/pexels-photo-1394882.jpeg",
+    category: "women",
   },
   {
     id: 17,
@@ -117,6 +133,7 @@ export const mockData = [
     title: "Teen Girl in Plaid Skirt Outfit",
     price: 38.0,
     image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg",
+    category: "kids",
   },
   {
     id: 18,
@@ -124,6 +141,7 @@ export const mockData = [
     title: "Men's Winter Look with Beanie and Jacket",
     price: 66.0,
     image: "https://images.pexels.com/photos/1648468/pexels-photo-1648468.jpeg",
+    category: "men",
   },
   {
     id: 19,
@@ -131,6 +149,7 @@ export const mockData = [
     title: "Cute Girl's Printed Pajama Nightwear Set",
     price: 20.0,
     image: "https://images.pexels.com/photos/1648375/pexels-photo-1648375.jpeg",
+    category: "kids",
   },
   {
     id: 20,
@@ -138,6 +157,7 @@ export const mockData = [
     title: "Teen Boy’s Casual Tee and Shorts Set",
     price: 25.0,
     image: "https://images.pexels.com/photos/1619653/pexels-photo-1619653.jpeg",
+    category: "kids",
   },
   {
     id: 21,
@@ -145,5 +165,6 @@ export const mockData = [
     title: "Bohemian Fashion Style for Women",
     price: 58.5,
     image: "https://images.pexels.com/photos/1120473/pexels-photo-1120473.jpeg",
+    category: "women",
   },
 ];
