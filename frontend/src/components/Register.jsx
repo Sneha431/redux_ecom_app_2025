@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Register = () => {
+const Register = ({ openLogin }) => {
   return (
-    <div className="container w-1/3 mt-6 mx-auto mb-7 py-8 px-4 md:px-16 lg:px-24 rounded-sm shadow-md border border-gray-300 bg-gray-100">
+    <div className="">
       <h2 className="text-2xl font-bold mb-4">Register</h2>
       <form>
         <div className="mb-4">
@@ -44,10 +44,12 @@ const Register = () => {
       {/* Sign Up Section */}
       <div className="text-center">
         <span className="text-gray-700">Already have an account? </span>
-        <button className="text-red-800">Sign In</button>
+        <button type="button" className="text-red-800" onClick={openLogin}>
+          Sign In
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default Register

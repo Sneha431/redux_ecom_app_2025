@@ -40,7 +40,7 @@ const Home = () => {
           </div>
 
           <div className="w-full md:w-9/12 mt-8 md:mt-0 h-96 relative">
-            <img src={HeroImage} alt="" className="h-full w-full" />
+            <img src={HeroImage} alt="" className="h-full w-full object-cover" />
             <div className="absolute top-16 left-8">
               <p className="text-gray-600 mb-4">Code With Sneha</p>
               <h2 className="text-3xl font-bold">WELCOME TO E-SHOP</h2>

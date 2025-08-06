@@ -3,30 +3,30 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-const Checkout = ({setorder}) => {
-  const[billingToggle,setbillingtoggle]=useState(true);
+const Checkout = ({ setorder, address ,setaddress }) => {
+  const [billingToggle, setbillingtoggle] = useState(true);
   const [shippingToggle, setshippingToggle] = useState(false);
-    const [paymentToggle, setpaymentToggle] = useState(false);
-      const [paymentMethod, setpaymentMethod] = useState("COD");
-      const [shippingInfo,setshippingInfo]=useState({
-        name:"",
-        address:"",
-        city:"",
-        zipcode:""
-      });
-      const cart = useSelector(state=>state.cart);
-      const navigate = useNavigate();
-      const handleorder = () =>{
-        const neworder = {
-          products:cart.products,
-          orderNumber:"#"+Math.floor(Math.random() * 10000) + 1,
-          shippingInformation:shippingInfo,
-          totalPrice:cart.totalPrice
-
-        }
-        setorder(neworder);
-        navigate("/order-confirmation");
-      }
+  const [paymentToggle, setpaymentToggle] = useState(false);
+  const [paymentMethod, setpaymentMethod] = useState("COD");
+  const [shippingInfo, setshippingInfo] = useState({
+    name: "",
+   
+    city: "",
+    zipcode: "",
+  });
+  const cart = useSelector((state) => state.cart);
+  const navigate = useNavigate();
+  const handleorder = () => {
+    const neworder = {
+      products: cart.products,
+      orderNumber: "#" + Math.floor(Math.random() * 10000) + 1,
+      address:address,
+      shippingInformation: shippingInfo,
+      totalPrice: cart.totalPrice,
+    };
+    setorder(neworder);
+    navigate("/order-confirmation");
+  };
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
       <h3 className="text-2xl font-semibold mb-4">CHECKOUT</h3>
@@ -56,12 +56,13 @@ const Checkout = ({setorder}) => {
                   type="text"
                   name="name"
                   placeholder="Enter Name"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md outline-0" 
-                    onChange={(e) =>
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md outline-0"
+                  onChange={(e) =>
                     setshippingInfo({
                       ...shippingInfo,
                       name: e.target.value,
-                    })}
+                    })
+                  }
                 />
               </div>
               <div>
@@ -106,14 +107,10 @@ const Checkout = ({setorder}) => {
                 <input
                   type="text"
                   name="address"
+                  value={address}
                   placeholder="Enter Address"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md outline-0"
-                  onChange={(e) =>
-                    setshippingInfo({
-                      ...shippingInfo,
-                      address: e.target.value,
-                    })
-                  }
+                  onChange={(e) => setaddress(e.target.value)}
                 />
               </div>
               <div>
@@ -287,13 +284,16 @@ const Checkout = ({setorder}) => {
             </div>
           </div>
 
-          <button className="w-full bg-red-600 text-white py-2 mt-6 hover:bg-red-800" onClick={handleorder}>
+          <button
+            className="w-full bg-red-600 text-white py-2 mt-6 hover:bg-red-800"
+            onClick={handleorder}
+          >
             Place Order
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Checkout
