@@ -17,7 +17,7 @@ const Modal = ({ children, setisModalOpen, isModalOpen }) => {
         &times;
       </button>
       {/* Modal content */}
-      <div className="relative bg-white rounded-lg shadow-lg p-6 w-full max-w-md z-10">
+      <div className="relative bg-white rounded-lg shadow-lg mx-7 md:mx-0 p-6 w-full max-w-md z-10 ">
         <div>{children}</div>
       </div>
     </div>

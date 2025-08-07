@@ -12,29 +12,32 @@ import Register from "./components/Register";
 import FilterData from "./pages/FilterData";
 import ProductDetails from "./pages/ProductDetails";
 
-
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import Favourite from "./pages/Favourite";
+import About from "./pages/About";
 function App() {
  const[order,setorder]=useState(null);
   const [address,setaddress]=useState("Test 123");
-   
+   const [myfavourite,setmyfavourite]=useState(false);
   return (
     <BrowserRouter>
       <Navbar />
+      <ToastContainer />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-             
-            />
-          }
-        ></Route>
-      
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route
           path="/shop"
           element={
-            <Shop
-           
+            <Shop myfavourite={myfavourite} setmyfavourite={setmyfavourite} />
+          }
+        ></Route>
+        <Route
+          path="/favourite"
+          element={
+            <Favourite
+              myfavourite={myfavourite}
+              setmyfavourite={setmyfavourite}
             />
           }
         ></Route>

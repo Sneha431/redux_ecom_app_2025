@@ -5,7 +5,7 @@ import { mockData } from '../assets/mockData';
 import Productcard from '../components/Productcard';
 import { useSearchParams } from 'react-router-dom';
 
-const Shop = () => {
+const Shop = (myfavourite,setmyfavourite) => {
   const products = useSelector((state) => state.product);
   const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
@@ -18,7 +18,8 @@ const Shop = () => {
         (prod) => prod.category == category
       );
       dispatch(setProducts(categoryproduct));
-    } else {
+    } 
+    else {
       dispatch(setProducts(mockData));
     }
   }, []);
@@ -27,9 +28,13 @@ const Shop = () => {
     <div className="container mx-auto py-12 px-4 md:px-16 lg:px-24">
       <h2 className="text-xl font-bold mb-6 text-center">Shop</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        
         {products.products.map((product, index) => (
-          <Productcard product={product} key={index} />
+          <Productcard
+            product={product}
+            key={index}
+            myfavourite={myfavourite}
+            setmyfavourite={setmyfavourite}
+          />
         ))}
       </div>
     </div>
