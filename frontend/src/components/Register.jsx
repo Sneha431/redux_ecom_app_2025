@@ -9,7 +9,7 @@ const Register = ({ openLogin }) => {
           <label className="block text-gray-700">Name</label>
           <input
             type="text"
-            className="w-full px-3 py-2 border"
+            className="w-full px-3 py-2 border border-gray-400 outline-0"
             placeholder="Enter Name"
           />
         </div>
@@ -18,7 +18,7 @@ const Register = ({ openLogin }) => {
           <label className="block text-gray-700">Email</label>
           <input
             type="email"
-            className="w-full px-3 py-2 border"
+            className="w-full px-3 py-2 border border-gray-400 outline-0"
             placeholder="Enter Email"
           />
         </div>
@@ -28,7 +28,7 @@ const Register = ({ openLogin }) => {
           <label className="block text-gray-700">Password</label>
           <input
             type="password"
-            className="w-full px-3 py-2 border"
+            className="w-full px-3 py-2 border border-gray-400 outline-0"
             placeholder="Enter Password"
           />
         </div>

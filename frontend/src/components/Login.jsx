@@ -8,7 +8,7 @@ const Login = ({openSignUp}) => {
           <label className="block text-gray-700">Email</label>
           <input
             type="email"
-            className="w-full px-3 py-2 border"
+            className="w-full px-3 py-2 border border-gray-400 outline-0"
             placeholder="Enter Email"
           />
         </div>
@@ -18,7 +18,7 @@ const Login = ({openSignUp}) => {
           <label className="block text-gray-700">Password</label>
           <input
             type="password"
-            className="w-full px-3 py-2 border"
+            className="w-full px-3 py-2 border border-gray-400 outline-0"
             placeholder="Enter Password"
           />
         </div>

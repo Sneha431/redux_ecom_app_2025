@@ -12,9 +12,10 @@ import Register from "./components/Register";
 import FilterData from "./pages/FilterData";
 import ProductDetails from "./pages/ProductDetails";
 
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { Bounce, ToastContainer } from "react-toastify";
 import Favourite from "./pages/Favourite";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 function App() {
  const[order,setorder]=useState(null);
   const [address,setaddress]=useState("Test 123");
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
         <Route
           path="/shop"
           element={
