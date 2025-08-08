@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaBars, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
+import { FaBars, FaHeart, FaRegHeart, FaSearch, FaShoppingCart, FaUser } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import Modal from './Modal'
@@ -10,9 +10,11 @@ import { setsearchterm } from '../redux/productSlice'
 const Navbar = () => {
   const products = useSelector((state)=>state.cart.products);
 const totalQty = useSelector((state) => state.cart.totalQuantity);
+  const productsfav = useSelector((state) => state.product.favourite);
 const [isModelOpen,setisModelOpen]=useState(false);
 const [isLogin, setisLogin] = useState(true);
 const [search, setsearch] = useState(true);
+
 const dispatch=useDispatch();
 const navigate = useNavigate();
 const openSignUp = ()=>{
@@ -56,7 +58,7 @@ const [showdiv,setshowdiv]=useState(false);
             </form>
           </div>
           <div className="flex items-center space-x-4">
-            <Link to="/cart" className="relative">
+            <Link to="/cart" className="relative" title="My Cart">
               <FaShoppingCart className="text-lg mr-2" />
               {products.length > 0 && (
                 <span className="absolute top-0 text-xs px-2 py-[1.4px] w-3 left-3 bg-red-600 rounded-full flex justify-center items-center text-white ml-1 mt-[-5px]">
@@ -64,16 +66,24 @@ const [showdiv,setshowdiv]=useState(false);
                 </span>
               )}
             </Link>
-            <div className="flex justify-between space-x-2 ml-2">
+            <Link to="/favourite" className="relative" title="My Wishlist">
+              <FaHeart className="text-lg md:mr-2 text-red-600" />
+              {productsfav.length > 0 && (
+                <span className="absolute top-0 text-xs px-2 py-[1.4px] w-3 left-3 bg-black rounded-full flex justify-center items-center text-white ml-1 mt-[-5px]">
+                  {productsfav.length}
+                </span>
+              )}
+            </Link>
+            <div className="flex justify-between md:space-x-2  md:ml-5">
               <button className="hidden md:block" onClick={openLogin}>
                 Login
               </button>
-              <span className="">|</span>
+              <span className="hidden md:block">|</span>
               <button className="hidden md:block" onClick={openSignUp}>
                 Register
               </button>
             </div>
-            <button className="block md:hidden">
+            <button className="block md:hidden mb-2">
               <FaUser onClick={openLogin} />
             </button>
           </div>
@@ -86,9 +96,9 @@ const [showdiv,setshowdiv]=useState(false);
           <Link className="hover:underline" to="/shop">
             Shop
           </Link>
-          <Link className="hover:underline" to="/favourite">
+          {/* <Link className="hover:underline" to="/favourite">
             Favourites
-          </Link>
+          </Link> */}
           <Link className="hover:underline" to="/contact">
             Contact
           </Link>
@@ -147,11 +157,11 @@ const [showdiv,setshowdiv]=useState(false);
               Shop
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link className="hover:underline" to="/favourite">
               Favourites
             </Link>
-          </li>
+          </li> */}
           <li>
             {" "}
             <Link className="hover:underline" to="/contact">
