@@ -1,18 +1,20 @@
 import React from 'react'
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-8 px-4 md:px-16 lg:px-24">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-semibold uppercase">e-Shop</h3>
+          <Link className="text-xl font-semibold uppercase" to="/">
+            e-Shop
+          </Link>
           <p className="mt-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-            explicabo nisi vel enim ut atque nemo tenetur tempore praesentium
-            non, voluptates, eveniet nihil quisquam voluptatum voluptatem.
-            Dolorem nisi aliquam et.
+            Eshop is your one-stop online destination for fashion and lifestyle
+            in India. Shop trendy clothing, footwear, accessories, beauty
+            products, and more for men, women, and kids — all delivered to your
+            doorstep.
           </p>
         </div>
         <div className="flex flex-col md:items-center">
@@ -64,7 +66,7 @@ const Footer = () => {
             />
             <button
               type="button"
-              className="bg-red-600 text-white px-4 py-2 rounded-r-lg border border-gray-600"
+              className="bg-red-600 text-white px-4 py-2 rounded-r-lg border border-gray-600 cursor-pointer"
             >
               Subscribe
             </button>

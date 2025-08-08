@@ -60,7 +60,7 @@ console.log(product);
 
           {/* Add to Cart Button */}
           <button
-            className="bg-red-600 text-white py-1.5 px-4 hover:bg-red-800"
+            className="bg-red-600 text-white py-1.5 px-4 hover:bg-red-800 cursor-pointer"
             onClick={(e) => handleaddtocart(e, product)}
           >
             Add to Cart

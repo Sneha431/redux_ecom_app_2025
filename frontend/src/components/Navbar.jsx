@@ -74,12 +74,18 @@ const [showdiv,setshowdiv]=useState(false);
                 </span>
               )}
             </Link>
-            <div className="flex justify-between md:space-x-2  md:ml-5">
-              <button className="hidden md:block" onClick={openLogin}>
+            <div className="flex justify-between md:space-x-2  md:ml-5 ">
+              <button
+                className="hidden md:block cursor-pointer"
+                onClick={openLogin}
+              >
                 Login
               </button>
               <span className="hidden md:block">|</span>
-              <button className="hidden md:block" onClick={openSignUp}>
+              <button
+                className="hidden md:block cursor-pointer"
+                onClick={openSignUp}
+              >
                 Register
               </button>
             </div>
