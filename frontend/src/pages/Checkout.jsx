@@ -31,11 +31,13 @@ const Checkout = ({ setorder, address ,setaddress }) => {
  setshowload(true);
 
     setorder(neworder);
-    dispatch(clearcart());
+   
     toast.success("Order Placed Successfully.")
      setTimeout(() => {
       setshowload(false);
        navigate("/order-confirmation");
+       dispatch(clearcart());
+      
      }, 500);
    
 
