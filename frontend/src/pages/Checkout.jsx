@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { clearcart } from '../redux/cartSlice';
 
 const Checkout = ({ setorder, address ,setaddress }) => {
   const [billingToggle, setbillingtoggle] = useState(true);
@@ -15,6 +16,7 @@ const Checkout = ({ setorder, address ,setaddress }) => {
     zipcode: "",
   });
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch("");
   const navigate = useNavigate();
   const handleorder = () => {
     const neworder = {
@@ -24,8 +26,11 @@ const Checkout = ({ setorder, address ,setaddress }) => {
       shippingInformation: shippingInfo,
       totalPrice: cart.totalPrice,
     };
+
     setorder(neworder);
+    dispatch(clearcart());
     navigate("/order-confirmation");
+
   };
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
