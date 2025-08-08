@@ -24,7 +24,7 @@ const Login = ({openSignUp}) => {
         </div>
 
         {/* Remember Me & Forgot Password */}
-        <div className="mb-4 flex items-center justify-between">
+        <div className="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-0">
           <label className="inline-flex items-center">
             <input type="checkbox" className="form-checkbox" />
             <span className="ml-2 text-gray-700">Remember me</span>

@@ -36,7 +36,8 @@ export const mockData = [
     name: "Urban Streetwear",
     title: "Men's Black Urban Street Style Outfit",
     price: 49.99,
-    image: "https://images.pexels.com/photos/2209971/pexels-photo-2209971.jpeg",
+    image:
+      "https://i.pinimg.com/736x/41/ac/ea/41aceab37ee3e126d9605d6ec51aa4ea.jpg",
     category: "men",
   },
   {
@@ -44,7 +45,8 @@ export const mockData = [
     name: "Pink Floral Dress",
     title: "Women's Pink Floral Summer Dress",
     price: 34.99,
-    image: "https://images.pexels.com/photos/6311601/pexels-photo-6311601.jpeg",
+    image:
+      "https://i.pinimg.com/1200x/88/fa/a6/88faa60a5653464b2d6757c08b9b1da4.jpg",
     category: "women",
   },
   {
@@ -52,7 +54,8 @@ export const mockData = [
     name: "Boys Fashion Hoodie",
     title: "Boys' Hooded Sweatshirt and Pants Set",
     price: 27.99,
-    image: "https://images.pexels.com/photos/3662832/pexels-photo-3662832.jpeg",
+    image:
+      "https://i.pinimg.com/1200x/bf/33/db/bf33db61fbabc10b88642a080c0b4ab2.jpg",
     category: "kids",
   },
   {
@@ -60,15 +63,17 @@ export const mockData = [
     name: "Beige Winter Coat",
     title: "Women's Elegant Beige Winter Coat",
     price: 74.99,
-    image: "https://images.pexels.com/photos/1916825/pexels-photo-1916825.jpeg",
+    image:
+      "https://i.pinimg.com/564x/2b/a3/2d/2ba32dddb45c5c40522d5a07431a3aa3.jpg",
     category: "women",
   },
   {
     id: 9,
     name: "Kids Denim Dungaree",
-    title: "Little Girl's Blue Denim Dungaree",
+    title: "Little boy's Blue Denim Dungaree",
     price: 24.49,
-    image: "https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg",
+    image:
+      "https://i.pinimg.com/1200x/3e/ce/d3/3eced38548c7cc6696710bd3b500fde0.jpg",
     category: "kids",
   },
   {
@@ -76,7 +81,8 @@ export const mockData = [
     name: "Grey Blazer",
     title: "Men's Grey Slim Fit Office Blazer",
     price: 89.99,
-    image: "https://images.pexels.com/photos/3771836/pexels-photo-3771836.jpeg",
+    image:
+      "https://i.pinimg.com/1200x/69/13/33/69133337e5e4ef6ed4e38d9c16d155f3.jpg",
     category: "men",
   },
   {
@@ -84,7 +90,8 @@ export const mockData = [
     name: "Modern Sari Look",
     title: "Women's Festive Sari with Modern Twist",
     price: 56.0,
-    image: "https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg",
+    image:
+      "https://i.pinimg.com/736x/d6/6e/57/d66e5706e670b43830404c598abf97be.jpg",
     category: "women",
   },
   {
@@ -106,9 +113,10 @@ export const mockData = [
   {
     id: 14,
     name: "Ethnic Kidswear",
-    title: "Boys Traditional Ethnic Wear",
+    title: "Girls Traditional Ethnic Wear",
     price: 35.75,
-    image: "https://images.pexels.com/photos/1648378/pexels-photo-1648378.jpeg",
+    image:
+      "https://i.pinimg.com/736x/84/28/14/842814e3a1397a55b82f8b79eb285f64.jpg",
     category: "kids",
   },
   {
@@ -116,7 +124,8 @@ export const mockData = [
     name: "Leather Jacket",
     title: "Men's Black Leather Biker Jacket",
     price: 119.99,
-    image: "https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg",
+    image:
+      "https://i.pinimg.com/736x/a2/85/69/a28569d28bb6aae73e744e102199ce99.jpg",
     category: "men",
   },
   {
@@ -132,7 +141,8 @@ export const mockData = [
     name: "Teen Girl Fashion",
     title: "Teen Girl in Plaid Skirt Outfit",
     price: 38.0,
-    image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg",
+    image:
+      "https://i.pinimg.com/736x/06/81/00/068100219e903e0094be0bc6fcdc1ee9.jpg",
     category: "kids",
   },
   {
@@ -140,7 +150,8 @@ export const mockData = [
     name: "Winter Beanie Look",
     title: "Men's Winter Look with Beanie and Jacket",
     price: 66.0,
-    image: "https://images.pexels.com/photos/1648468/pexels-photo-1648468.jpeg",
+    image:
+      "https://i.pinimg.com/736x/57/b0/06/57b00698fd11316015eadb03273def66.jpg",
     category: "men",
   },
   {
@@ -148,7 +159,8 @@ export const mockData = [
     name: "Kids Pajama Set",
     title: "Cute Girl's Printed Pajama Nightwear Set",
     price: 20.0,
-    image: "https://images.pexels.com/photos/1648375/pexels-photo-1648375.jpeg",
+    image:
+      "https://i.pinimg.com/736x/2d/15/be/2d15be7bc0d1bcc6491232cb874e334d.jpg",
     category: "kids",
   },
   {
@@ -156,7 +168,8 @@ export const mockData = [
     name: "Teen Boy Casuals",
     title: "Teen Boy’s Casual Tee and Shorts Set",
     price: 25.0,
-    image: "https://images.pexels.com/photos/1619653/pexels-photo-1619653.jpeg",
+    image:
+      "https://i.pinimg.com/736x/5e/09/e3/5e09e30f8e24bb7c4a29cb27a8f47e4b.jpg",
     category: "kids",
   },
   {
@@ -164,7 +177,8 @@ export const mockData = [
     name: "Boho Girl Style",
     title: "Bohemian Fashion Style for Women",
     price: 58.5,
-    image: "https://images.pexels.com/photos/1120473/pexels-photo-1120473.jpeg",
+    image:
+      "https://i.pinimg.com/736x/17/30/49/1730498b57d33ef0d4eb2347ffea7ad5.jpg",
     category: "women",
   },
 ];

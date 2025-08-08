@@ -3,6 +3,7 @@ import { FaCarSide, FaQuestion } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { addToCart } from '../redux/cartSlice';
+import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
   const {id} = useParams();
@@ -15,7 +16,7 @@ const ProductDetails = () => {
     e.preventDefault();
    dispatch(addToCart({ ...product, quantity: parseInt(quantity) }));
 
-    alert("Product added successfully");
+    toast.success("Product added successfully");
   };
   useEffect(() => {
    const newproduct = products.find((product)=>product.id===parseInt(id));

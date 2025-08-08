@@ -7,19 +7,28 @@ import ChangeAddress from '../components/ChangeAddress';
 import { decreaseQuantity, increaseQuantity, removeFromCart } from '../redux/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import App from './../App';
+import { toast } from 'react-toastify';
 const Cart = ({address,setaddress}) => {
   const cart = useSelector((state)=>state.cart);
 
   const[isModalOpen,setisModalOpen]=useState(false);
   const dispatch = useDispatch();
   const navigate=useNavigate();
+  const deletecartitem =(prod)=>{
+     toast.success(`${prod.name} deleted successfully`);
+   dispatch(removeFromCart(prod.id));
+  
+   console.log("deleted");
+  }
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
       {cart.products.length > 0 ? (
-        <div className="flex flex-col md:flex-row justify-between space-x-10 mt-8">
+        <div className="flex flex-col md:flex-row justify-between space-x-10 md:mt-8 ">
           {/* Product List */}
           <div className="md:w-2/3">
-            <h3 className="text-2xl font-semibold mb-4">SHOPPING CART</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-center mx-auto ml-12">
+              SHOPPING CART
+            </h3>
             {/* For desktop */}
             <div className="hidden md:flex justify-between border-b items-center mb-4 text-[15px] font-bold">
               <p>PRODUCT</p>
@@ -43,7 +52,9 @@ const Cart = ({address,setaddress}) => {
                       className="w-16 h-16 object-contain rounded"
                     />
                     <div className="flex-1 ml-4">
-                      <h3 className="text-[17px] font-semibold">{product.name}</h3>
+                      <h3 className="text-[17px] font-semibold">
+                        {product.name}
+                      </h3>
                     </div>
                   </div>
 
@@ -73,7 +84,7 @@ const Cart = ({address,setaddress}) => {
 
                     <button className="text-red-500 hover:text-red-700">
                       <FaTrashAlt
-                        onClick={() => dispatch(removeFromCart(product.id))}
+                        onClick={()=>deletecartitem(product)}
                       />
                     </button>
                   </div>
@@ -82,15 +93,14 @@ const Cart = ({address,setaddress}) => {
                 <div className="flex flex-col justify-between p-3  md:hidden">
                   {/* Product Info */}
                   <div className="flex items-center justify-between ">
-                    <div className="flex flex-col   space-x-4">
+                    <div className="flex flex-col   ">
                       <img
                         src={product.image}
                         alt={product.name}
                         className="w-16 h-16 object-contain rounded"
                       />
-                      <h3 className="text-lg font-semibold">{product.name}</h3>
                     </div>
-                    <div className="flex items-center justify-center border h-full mb-5 ">
+                    <div className="flex  flex-row border  items-center justify-center ">
                       <button
                         className="text-xl font-bold px-1.5 border-r"
                         onClick={() => dispatch(decreaseQuantity(product.id))}
@@ -107,21 +117,24 @@ const Cart = ({address,setaddress}) => {
                         +
                       </button>
                     </div>
-                    <button className="text-red-500 hover:text-red-700 mb-5">
+                    <button className="text-red-500 hover:text-red-700  ">
                       <FaTrashAlt
-                        onClick={() => dispatch(removeFromCart(product.id))}
+                        onClick={() => deletecartitem(product)}
                       />
                     </button>
                   </div>
 
                   {/* Price, Quantity, Total, Delete */}
-                  <div className="flex space-x-12 items-center mb-4">
+                  <div className="flex flex-col  gap-2 mb-4">
+                    <p className="text-lg font-semibold mt-2">
+                      Name:<span className="ml-2">{product.name}</span>
+                    </p>
                     <p>
                       {" "}
                       <span className="text-md font-bold mr-2">
                         Sub Total :
                       </span>
-                      ${product.price}
+                      <span>${product.price}</span>
                     </p>
                     <p>
                       <span className="text-md font-bold mr-2">Total:</span>$
@@ -178,7 +191,7 @@ const Cart = ({address,setaddress}) => {
       ) : (
         <div className="flex flex-col items-center justify-center">
           <img src={Emptycart} alt="" className="h-96" />
-          <p className='text-3xl font-bold'>No items in the cart</p>
+          <p className="text-3xl font-bold">No items in the cart</p>
         </div>
       )}
     </div>
