@@ -3,12 +3,14 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { clearcart } from '../redux/cartSlice';
-
+import loader from "../assets/images/loading_button.gif";
+import { toast } from 'react-toastify';
 const Checkout = ({ setorder, address ,setaddress }) => {
   const [billingToggle, setbillingtoggle] = useState(true);
   const [shippingToggle, setshippingToggle] = useState(false);
   const [paymentToggle, setpaymentToggle] = useState(false);
   const [paymentMethod, setpaymentMethod] = useState("COD");
+     const [showload, setshowload] = useState(false);
   const [shippingInfo, setshippingInfo] = useState({
     name: "",
    
@@ -26,12 +28,22 @@ const Checkout = ({ setorder, address ,setaddress }) => {
       shippingInformation: shippingInfo,
       totalPrice: cart.totalPrice,
     };
+ setshowload(true);
 
     setorder(neworder);
     dispatch(clearcart());
-    navigate("/order-confirmation");
+    toast.success("Order Placed Successfully.")
+     setTimeout(() => {
+      setshowload(false);
+       navigate("/order-confirmation");
+     }, 500);
+   
 
   };
+ 
+
+  
+    
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
       <h3 className="text-2xl font-semibold mb-4">CHECKOUT</h3>
@@ -290,10 +302,17 @@ const Checkout = ({ setorder, address ,setaddress }) => {
           </div>
 
           <button
-            className="w-full bg-red-600 text-white py-2 mt-6 hover:bg-red-800"
+            className="w-full bg-red-600 text-white py-2 mt-6 text-md hover:bg-red-800 flex items-center text-center justify-center"
             onClick={handleorder}
           >
-            Place Order
+            {showload  ? "Placing order, please wait...." :"Place Order"}
+                    
+                     <img
+                       src={loader}
+                       className={`w-5 h-5 ml-2 mt-1 ${
+                         showload ? "block" : "hidden"
+                       }`}
+                     />
           </button>
         </div>
       </div>
