@@ -16,7 +16,7 @@ const ProductDetails = () => {
     e.preventDefault();
    dispatch(addToCart({ ...product, quantity: parseInt(quantity) }));
 
-    toast.success("Product added successfully");
+    toast.success(`${product.name} added successfully`);
   };
   useEffect(() => {
    const newproduct = products.find((product)=>product.id===parseInt(id));
@@ -36,15 +36,17 @@ console.log(product);
         {/* Product Information */}
         <div className="md:w-1/2 p-4 shadow-md md:p-16 flex flex-col items-center gap-y-2">
           <h2 className="text-3xl font-semibold mb-2">{product.name}</h2>
-          <p className="text-xl font-semibold text-gray-800 mb-4">
-            <span className='mr-3'>Price :</span>
-            ${product.price}
+          <p className="text-lg font-semibold text-gray-800 mb-4">
+            <span className="mr-3">Price :</span>${product.price}
           </p>
 
           {/* Quantity Input */}
           <div className="flex items-center mb-4 gap-x-2">
-            <label htmlFor="quantity" className="mr-2">
-              Quantity:
+            <label
+              htmlFor="quantity"
+              className="mr-2 text-lg font-semibold text-gray-800"
+            >
+              Quantity :
             </label>
             <input
               id="quantity"
