@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-8 px-4 md:px-16 lg:px-24">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-semibold">e-Shop</h3>
+          <h3 className="text-xl font-semibold uppercase">e-Shop</h3>
           <p className="mt-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
             explicabo nisi vel enim ut atque nemo tenetur tempore praesentium
@@ -73,7 +73,7 @@ const Footer = () => {
       </div>
       <div className="mt-8 border-t border-gray-700 pt-4">
         <div className="container  mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; 2025 E-SHOP ALL RIGHTS RESERVED</p>
+          <p>&copy; 2025 E-SHOP ALL RIGHTS RESERVED | SNEHA GOSWAMI</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link className="hover:underline"> Privacy Policy</Link>
             <Link className="hover:underline">Terms and condition</Link>

@@ -38,7 +38,7 @@ const [showdiv,setshowdiv]=useState(false);
           <div className="p-4 md:hidden">
             <FaBars onClick={() => setshowdiv(!showdiv)} />
           </div>
-          <div className="text-lg font-bold">
+          <div className="text-lg font-bold uppercase">
             <Link to="/">E-Shop</Link>
           </div>
           <div className="relative flex-1 mx-4 hidden md:block ">
